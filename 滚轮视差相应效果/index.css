@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 200vh;
+}
+.bg{
+    background-image: url("./image/mountain.jpg");
+    height: 200vh;
+    /*对图片进行裁切，保留原始比例*/
+    background-size: cover;
+    /*设置背景图片的定位，初始化为居中*/
+    background-position: 50% 50%;
+    font-size: 650px;
+    font-weight: 900;
+    text-align: center;
+    /*相对定位*/
+    position: relative;
+    /*-webkit为谷歌游览器特有属性，这里不能去掉*/
+    /*因为text不是background-clip的属性*/
+    -webkit-background-clip: text;
+    /* 将文字透明镂空 */
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+}
+.bg::before{
+    content: "";
+    /*背景图片继承父元素*/
+    background-image: inherit;
+    background-size: cover;
+    /*设置背景图片的定位，初始化为居中*/
+    background-position: 50% 50%;
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -99;
+}
+h2 {
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    position: absolute;
+    top: 145vh;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+}

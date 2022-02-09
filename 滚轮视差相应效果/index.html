@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚轮视差效果</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h2>滚动一下吧</h2>
+    <div class="bg">
+        <span>Hello</span>
+    </div>
+    <h1>欢迎光临</h1>
+    <script type="text/javascript">
+        const bg=document.querySelector('.bg');
+        document.addEventListener('scroll',()=>{
+            const scrollY=window.scrollY;
+            if (scrollY!==0) {
+                bg.style.backgroundPosition = "calc(50% + " + scrollY + "px) calc(50% + " + scrollY + "px)"
+            }
+        })
+    </script>
+</body>
+</html>
