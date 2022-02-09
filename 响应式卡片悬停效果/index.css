@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    /*绝对居中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*渐变背景色*/
+    background: linear-gradient(200deg,#80d0c7,#13547a);
+}
+.container{
+    /*相对定位*/
+    position: relative;
+    /*弹性布局*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 215px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 200px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    margin: 30px 15px;
+    padding: 20px 15px;
+}
+.container .card:hover{
+    height: 420px;
+}
+.container .card .img-box{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 5px;
+    /*溢出隐藏*/
+    overflow: hidden;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.container .card .img-box img{
+    width: 100%;
+}
+.container .card .text-box{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    visibility: hidden;
+    color: #111;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+.container .card .text-box p{
+    text-align: left;
+    color: #555;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.container .card:hover .text-box{
+    visibility: visible;
+    margin-top: -40px;
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+
