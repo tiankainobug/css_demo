@@ -56,4 +56,11 @@ header ul li a{
 }
 .sticky{
     background-color: #ffffff;
+    padding: 10px 100px;
+}
+.sticky .logo {
+    color: #111111;
+}
+.sticky ul li a{
+    color: #111111;
 }
